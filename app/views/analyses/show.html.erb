@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Campaign name:</strong>
+  <%= @analysis.campaign_name %>
+</p>
+
+<p>
+  <strong>User name:</strong>
+  <%= @analysis.user_name %>
+</p>
+
+<p>
+  <strong>Agency:</strong>
+  <%= @analysis.agency %>
+</p>
+
+<%= link_to 'Edit', edit_analysis_path(@analysis) %> |
+<%= link_to 'Back', analyses_path %>
