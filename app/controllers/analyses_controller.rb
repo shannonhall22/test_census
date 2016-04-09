@@ -14,7 +14,7 @@ class AnalysesController < ApplicationController
   # GET /analyses/1
   # GET /analyses/1.json
   def show
-    url = "http://api.census.gov/data/2014/acs5?"
+    url = "http://api.census.gov/data/2014/acs5/profile/variables.json"
     response = open(url).read
     parsed_response = JSON.parse(response)
     @result = parsed_response
@@ -77,6 +77,6 @@ class AnalysesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def analysis_params
-      params.require(:analysis).permit(:campaign_name, :user_name, :agency)
+      params.require(:analysis).permit(:campaign_name, :user_id, :zip)
     end
 end

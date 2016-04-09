@@ -1,3 +1,7 @@
+<%= @result %>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -7,12 +11,12 @@
 
 <p>
   <strong>User name:</strong>
-  <%= @analysis.user_name %>
+  <%= @analysis.user_id %>
 </p>
 
 <p>
   <strong>Agency:</strong>
-  <%= @analysis.agency %>
+  <%= @analysis.zip %>
 </p>
 
 <%= link_to 'Edit', edit_analysis_path(@analysis) %> |
